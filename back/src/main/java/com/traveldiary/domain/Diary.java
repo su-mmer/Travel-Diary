@@ -1,5 +1,6 @@
 package com.traveldiary.domain;
 
+import java.time.LocalDateTime;
 import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -28,6 +29,9 @@ public class Diary {
 
   @Column(name = "content")
   private String content;
+
+  @Column(name = "create_time")
+  private LocalDateTime createTime;
 
   @OneToMany(mappedBy = "diary")
   private Set<ImageFile> imageFiles;
