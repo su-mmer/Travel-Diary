@@ -25,7 +25,7 @@ public class DiaryController {
   @GetMapping("/diary/{id}")
   public ResponseEntity<DiaryDto> getDiaryInfoById(@PathVariable("id") Long id) {
     try {
-      return ResponseEntity.ok(diaryService.getDiary(id));
+      return ResponseEntity.ok(diaryService.getDiaryById(id));
     } catch (DiaryJpaException e) {
       e.printStackTrace();
       return ResponseEntity.badRequest().build();

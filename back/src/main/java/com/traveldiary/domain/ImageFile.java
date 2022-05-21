@@ -32,6 +32,12 @@ public class ImageFile {
   @Column(name = "path")
   private String path;
 
+  @Column(name = "width_size")
+  private Long widthSize;
+
+  @Column(name = "height_size")
+  private Long heightSize;
+
   @Override
   public String toString() {
     return "ImageFile{" +
