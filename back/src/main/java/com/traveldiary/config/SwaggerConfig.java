@@ -16,12 +16,12 @@ public class SwaggerConfig {
   public Docket api() {
     return new Docket(DocumentationType.OAS_30)
         .useDefaultResponseMessages(false).select()
-        .apis(RequestHandlerSelectors.basePackage("com.kkmwys.knowthyself"))
+        .apis(RequestHandlerSelectors.basePackage("com.traveldiary.controller"))
         .paths(PathSelectors.any()).build().apiInfo(apiInfo());
   }
 
   private ApiInfo apiInfo() {
-    return new ApiInfoBuilder().title("Knowthyself plan swagger")
+    return new ApiInfoBuilder().title("Travel_Diary swagger")
         .description("practice swagger config").version("1.0").build();
   }
 }
