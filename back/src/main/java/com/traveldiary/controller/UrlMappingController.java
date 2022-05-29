@@ -15,4 +15,14 @@ public class UrlMappingController {
   public String getRootPage() {
     return "index";
   }
+
+  @GetMapping("/photos")
+  public String getPhotoListPage() {
+    return "photo-list";
+  }
+
+  @GetMapping("/edit")
+  public String getEditPage() {
+    return "edit";
+  }
 }

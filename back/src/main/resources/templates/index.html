@@ -15,36 +15,32 @@
   <div class="loader-section section-left"></div>
   <div class="loader-section section-right"></div>
 </div>
-<nav class="navbar navbar-expand-lg">
-  <div class="container-fluid">
-    <a class="navbar-brand" th:href="@{#}">
-      <i class="fas fa-film mr-2"></i>
-      Travel_Diary
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-            aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fas fa-bars"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link nav-link-1 active" aria-current="page" th:href="@{index}">Photos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-link-2" th:href="@{videos}">Videos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-link-3" th:href="@{about}">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-link-4" th:href="@{contact}">Contact</a>
-        </li>
-      </ul>
+<div th:replace="/navbar::nav"></div>
+<div class="container-fluid tm-container-content tm-mt-60">
+  <!-- Latest Contents  -->
+  <div class="row mb-4">
+    <h2 class="col-6 tm-text-primary">
+      Latest Contents
+    </h2>
+    <div class="col-6 d-flex justify-content-end align-items-center">
+      <form action="" class="tm-text-primary">
+        Page <input type="text" value="1" size="1" class="tm-input-paging tm-text-primary"> of 180
+      </form>
     </div>
   </div>
-</nav>
 
+  <!-- Category  -->
+  <div class="row mb-4">
+    <h2 class="col-6 tm-text-primary">
+      Category
+    </h2>
+    <div class="col-6 d-flex justify-content-end align-items-center">
+      <form action="" class="tm-text-primary">
+        Page <input type="text" value="1" size="1" class="tm-input-paging tm-text-primary"> of 180
+      </form>
+    </div>
+  </div>
+</div>
 <script th:src="@{js/plugins.js}"></script>
 <script>
   $(window).on("load", function () {
